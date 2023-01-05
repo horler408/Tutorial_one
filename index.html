@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Box Model</title>
+  </head>
+
+  <style>
+    * {
+      padding: 0;
+      margin: 0;
+    }
+    .parent-box {
+      position: relative;
+      width: 1000px;
+      height: 250px;
+      background: aquamarine;
+      margin: 180px auto;
+      padding-top: 15px;
+    }
+    .boxes {
+      position: absolute;
+      width: 30%;
+      height: 80%;
+      margin: 10px;
+      text-align: center;
+      color: aliceblue;
+      font-size: 30px;
+    }
+    #left-box {
+      left: 10px;
+      background-color: black;
+    }
+    #center-box {
+      left: 35%;
+      background-color: green;
+    }
+    #right-box {
+      right: 10px;
+      background-color: red;
+    }
+  </style>
+  <body>
+    <div class="container">
+      <div class="parent-box">
+        <div class="boxes" id="left-box">Left</div>
+        <div class="boxes" id="center-box">Center</div>
+        <div class="boxes" id="right-box">Right</div>
+      </div>
+    </div>
+  </body>
+</html>
