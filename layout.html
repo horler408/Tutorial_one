@@ -62,22 +62,42 @@
       position: absolute;
       width: 50px;
       height: 100%;
-      background-color: aliceblue;
+      color: white;
+      font-size: 30px;
+      padding: 5px;
+      text-align: center;
+      writing-mode: vertical-lr;
       text-orientation: upright;
+      background-color: black;
     }
     .left {
       left: 5px;
     }
     .right {
-      right: 5px;
+      right: 0px;
     }
     .hero {
       position: absolute;
       width: 95%;
       height: 100%;
       left: 50px;
-      background-color: tomato;
+      background-color: white;
     }
+    .landing {
+      position: absolute;
+      width: 250px;
+      height: 50px;
+      left: 35%;
+      top: 50%;
+      text-align: center;
+      font-size: 25px;
+      padding-top: 10px;
+      border-radius: 5px;
+      color: aliceblue;
+      background-color: black;
+    }
+
+    /* Footer */
     .footer {
       position: relative;
       width: 100%;
@@ -87,18 +107,7 @@
       padding-top: 10px;
       text-align: center;
     }
-    .landing {
-      position: absolute;
-      width: 250px;
-      height: 50px;
-      left: 40%;
-      top: 50%;
-      text-align: center;
-      font-size: 25px;
-      padding-top: 10px;
-      border-radius: 5px;
-      background-color: aliceblue;
-    }
+
     .footer a {
       color: aliceblue;
     }
@@ -116,11 +125,11 @@
         </div>
       </header>
       <div class="content">
-        <div class="side-bars left">Left</div>
+        <div class="side-bars left">Left Side Bar</div>
         <div class="hero">
           <div class="landing">Landing Page</div>
         </div>
-        <div class="side-bars right">Right</div>
+        <div class="side-bars right">Right Side Bar</div>
       </div>
       <footer class="footer"><a href="#">&copy;copyright 2023</a></footer>
     </div>
