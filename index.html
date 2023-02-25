@@ -14,15 +14,17 @@
     }
     .parent-box {
       position: relative;
-      width: 1000px;
+      width: 1300px;
       height: 250px;
-      background: aquamarine;
+      /* background: aquamarine; */
+      background-color: brown;
+      background-image: linear-gradient(40deg, brown 0%, red 40%);
       margin: 180px auto;
       padding-top: 15px;
     }
     .boxes {
       position: absolute;
-      width: 18%;
+      width: 15%;
       height: 85%;
       margin: 5px;
       text-align: center;
@@ -34,20 +36,100 @@
       background-color: black;
     }
     #box-two {
-      left: 20%;
+      left: 17%;
       background-color: green;
     }
     #box-three {
-      left: 40%;
-      background-color: red;
+      left: 34%;
+      background-color: aliceblue;
     }
     #box-four {
-      left: 60%;
+      left: 50%;
       background-color: yellowgreen;
     }
     #box-five {
-      right: 10px;
+      left: 67%;
       background-color: blue;
+    }
+    #box-six {
+      right: 10px;
+      background-color: tan;
+    }
+
+    @media screen and (max-width: 850px) {
+      .parent-box {
+        width: 95%;
+        height: 100vh;
+        margin: 10px;
+      }
+      .boxes {
+        position: absolute;
+        width: 45%;
+        height: 30%;
+        font-size: 30px;
+        margin: 10px;
+      }
+      #box-one {
+        top: 10px;
+      }
+      #box-two {
+        top: 10px;
+        left: 50%;
+      }
+      #box-three {
+        left: 10px;
+        top: 210px;
+      }
+      #box-four {
+        left: 50%;
+        top: 210px;
+      }
+      #box-five {
+        top: 410px;
+        left: 10px;
+      }
+      #box-six {
+        top: 410px;
+        left: 50%;
+      }
+    }
+
+    @media screen and (max-width: 420px) {
+      .parent-box {
+        width: 95%;
+        height: 100vh;
+        margin: 10px;
+      }
+      .boxes {
+        position: absolute;
+        width: 95%;
+        height: 20%;
+        font-size: 30px;
+        margin: 0px;
+      }
+      #box-one {
+        top: 10px;
+      }
+      #box-two {
+        top: 180px;
+        left: 10px;
+      }
+      #box-three {
+        left: 10px;
+        top: 350px;
+      }
+      #box-four {
+        left: 10px;
+        top: 520px;
+      }
+      #box-five {
+        top: 690px;
+        left: 10px;
+      }
+      #box-six {
+        top: 860px;
+        left: 10px;
+      }
     }
   </style>
   <body>
@@ -58,6 +140,7 @@
         <div class="boxes" id="box-three">Three</div>
         <div class="boxes" id="box-four">Four</div>
         <div class="boxes" id="box-five">Five</div>
+        <div class="boxes" id="box-six">Six</div>
       </div>
     </div>
   </body>

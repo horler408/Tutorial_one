@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Preview Upload</title>
+  </head>
+  <body>
+    <input type="file" onchange="showPic(this)" />
+    <img width="200" height="200" alt="Image" id="preview" src="" />
+    <script>
+      let preview = document.querySelector('#preview');
+
+      function showPic(ele) {
+        let pic = ele.files[0];
+        let url = URL.createObjectURL(pic);
+
+        preview.src = url;
+      }
+    </script>
+  </body>
+</html>
