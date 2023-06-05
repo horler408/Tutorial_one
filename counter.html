@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Counter</title>
+
+    <style>
+      .container {
+        margin: 50px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h1>Passenger Counter</h1>
+      <button id="decrement" onclick="decrement()">DECREMENT</button>
+      <div id="display">0</div>
+      <button id="increment" onclick="increment()">INCREMENT</button><br />
+      <button id="save" onclick="save()">SAVE</button>
+      <div>Previous Entries: <span id="entries"></span></div>
+      <div>Total Entries: <span id="total-entries"></span></div>
+      <button id="clear" onclick="clear()">CLEAR</button>
+      .
+    </div>
+
+    <script>
+      let data = 0;
+      const display = document.getElementById('display');
+      var previousEntries = document.getElementById('entries');
+      var totalPassengers = document.getElementById('total-entries');
+
+      previousEntries.innerHTML = localStorage.getItem('entries')
+        ? localStorage.getItem('entries')
+        : 0;
+
+      const decrement = () => {
+        data -= 1;
+
+        if (data < 0) data = 0;
+        display.innerText = data;
+      };
+
+      const increment = () => {
+        data += 1;
+        display.innerText = data;
+      };
+
+      const save = () => {
+        localStorage.setItem('entries', Number(display.innerHTML));
+        totalPassengers.innerHTML =
+          Number(localStorage.getItem('entries')) +
+          Number(previousEntries.innerText);
+      };
+
+      const clear = () => {
+        localStorage.removeItem('entries');
+        // localStorage.clear();
+      };
+    </script>
+  </body>
+</html>

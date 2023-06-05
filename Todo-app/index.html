@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Todo App</title>
+
+    <style>
+      .alert-danger {
+        background-color: pink;
+        color: white;
+      }
+
+      .alert-success {
+        background-color: green;
+        color: white;
+      }
+
+      .item-container {
+        visibility: hidden;
+      }
+      .show-container {
+        visibility: visible;
+      }
+    </style>
+  </head>
+  <body>
+    <section class="app-container">
+      <p class="alert"></p>
+      <p class="title">Todo App</p>
+      <form>
+        <input type="text" placeholder="Enter an item" id="input-item" />
+        <button type="click" class="add-btn">add</button>
+      </form>
+      <div class="item-container">
+        <div class="item-list">
+          <article class="todo-item">
+            <p></p>
+            <div class="btn-container">
+              <button type="button" class="edit-btn">edit</button>
+              <button type="button" class="delete-btn">delete</button>
+            </div>
+          </article>
+        </div>
+      </div>
+      <button class="clear-btn">clear</button>
+    </section>
+  </body>
+  <script src="./app.js"></script>
+</html>
